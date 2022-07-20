@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/subject")
@@ -21,11 +22,11 @@ public class SubjectController {
         return ResponseEntity.ok(subjects);
     }
 
-//    @GetMapping("/{id}")
-//    public ResponseEntity<Subject> getById(@PathVariable("id") Long id) {
-//        Subject subject = subjectService.getSubjectById(id);
-//        return ResponseEntity.ok(subject);
-//    }
+    @GetMapping("/{id}")
+    public ResponseEntity<Optional<Subject>> getById(@PathVariable("id") Long id) {
+        Optional<Subject> subject = subjectService.getSubjectById(id);
+        return ResponseEntity.ok(subject);
+    }
 
     @PostMapping()
     public ResponseEntity<Subject> save(@RequestBody Subject subject) {

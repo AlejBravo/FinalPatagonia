@@ -5,12 +5,3 @@ spring:
     config:
       enabled: true
       uri: http://localhost:8082
-
-  datasource:
-    url: jdbc:mysql://localhost:3306/finaltp?serverTimezone=UTC&allowPublicKeyRetrieval=true&useSSL = false
-    username: AleBrv
-    password: 2282tobito?
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  jpa:
-    show-sql: true
-    hibernate.ddl-auto: update

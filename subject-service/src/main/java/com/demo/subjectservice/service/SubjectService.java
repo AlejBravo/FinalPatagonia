@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SubjectService {
@@ -17,9 +18,9 @@ public class SubjectService {
         return subjectRepository.findAll();
     }
 
-//    public Subject getSubjectById(Long id) {
-//        return subjectRepository.findById(id);
-//    }
+    public Optional<Subject> getSubjectById(Long id) {
+        return subjectRepository.findById(id);
+    }
 
     public Subject save(Subject subject) {
         Subject subjectNew = subjectRepository.save(subject);
