@@ -7,8 +7,8 @@ spring:
       uri: http://localhost:8081
   datasource:
     url: jdbc:mysql://localhost:3306/finalpt
-    username:
-    password:
+    username: AleBrv
+    password: 2282tobito?
   jpa:
     show-sql: true
     hibernate.ddl-auto: update
