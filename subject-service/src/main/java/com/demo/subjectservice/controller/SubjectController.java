@@ -21,11 +21,11 @@ public class SubjectController {
         return ResponseEntity.ok(subjects);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<Subject> getById(@PathVariable("id") Long id) {
-        Subject subject = subjectService.getSubjectById(id);
-        return ResponseEntity.ok(subject);
-    }
+//    @GetMapping("/{id}")
+//    public ResponseEntity<Subject> getById(@PathVariable("id") Long id) {
+//        Subject subject = subjectService.getSubjectById(id);
+//        return ResponseEntity.ok(subject);
+//    }
 
     @PostMapping()
     public ResponseEntity<Subject> save(@RequestBody Subject subject) {

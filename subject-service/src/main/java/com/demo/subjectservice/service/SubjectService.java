@@ -17,9 +17,9 @@ public class SubjectService {
         return subjectRepository.findAll();
     }
 
-    public Subject getSubjectById(Long id) {
-        return subjectRepository.findById(id);
-    }
+//    public Subject getSubjectById(Long id) {
+//        return subjectRepository.findById(id);
+//    }
 
     public Subject save(Subject subject) {
         Subject subjectNew = subjectRepository.save(subject);
