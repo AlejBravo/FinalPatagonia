@@ -1044,5 +1044,28 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="296" parent="1" name="root">
       <Host>localhost</Host>
     </user>
+    <table id="297" parent="6" name="subject">
+      <Engine>MyISAM</Engine>
+    </table>
+    <column id="298" parent="297" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="299" parent="297" name="name">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+    </column>
+    <column id="300" parent="297" name="student_id">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="301" parent="297" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
   </database-model>
 </dataSource>

@@ -11,9 +11,6 @@ import java.util.List;
 @RequestMapping("/subject")
 public interface SubjectFeignClient {
 
-    @PostMapping()
-    Subject save(@RequestBody Subject subject);
-
     @GetMapping("/bystudent/{studentId}")
     List<Subject> getSubjects(@PathVariable("studentId") Long studentId);
 }

@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class StudentService {
@@ -28,13 +30,13 @@ public class StudentService {
         return studentRepository.save(student);
     }
 
-    public void deleteStudent(Long id) {
-        studentRepository.deleteById(id);
-    }
-
-    public Student save(Student student) {
-        Student studentNew = studentRepository.save(student);
-        return studentNew;
+    public Map<String, Object> getSubjectsByStudentId(Long studentId){
+        Map<String, Object> subjectsById = new HashMap<>();
+        Student student = studentRepository.findById(studentId).orElse(null);
+        subjectsById.put("Student", student);
+        List<Subject> subjects = subjectFeignClient.getSubjects(studentId);
+        subjectsById.put("Subjects", subjects);
+        return subjectsById;
     }
 
 }

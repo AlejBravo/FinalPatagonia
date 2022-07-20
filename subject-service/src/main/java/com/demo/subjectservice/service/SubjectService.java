@@ -27,7 +27,7 @@ public class SubjectService {
         return subjectNew;
     }
 
-    public List<Subject> byStudentId(Long studentId) {
-        return subjectRepository.findByStudentId(studentId);
+    public List<Subject> byStudentId(Long id) {
+        return subjectRepository.findByStudentId(id);
     }
 }
