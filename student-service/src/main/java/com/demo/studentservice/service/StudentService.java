@@ -6,7 +6,6 @@ import com.demo.studentservice.entity.Student;
 import com.demo.studentservice.model.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.HashMap;
 import java.util.List;
@@ -33,9 +32,9 @@ public class StudentService {
     public Map<String, Object> getSubjectsByStudentId(Long studentId){
         Map<String, Object> subjectsById = new HashMap<>();
         Student student = studentRepository.findById(studentId).orElse(null);
-        subjectsById.put("Student", student);
+        subjectsById.put("Student information:", student);
         List<Subject> subjects = subjectFeignClient.getSubjects(studentId);
-        subjectsById.put("Subjects", subjects);
+        subjectsById.put("Subjects:", subjects);
         return subjectsById;
     }
 

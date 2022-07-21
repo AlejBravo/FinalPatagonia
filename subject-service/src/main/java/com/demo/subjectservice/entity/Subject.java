@@ -18,5 +18,5 @@ public class Subject {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private int studentId;
+    private Long studentId;
 }
